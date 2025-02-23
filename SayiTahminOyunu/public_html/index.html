@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Number Guessing Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form>
+        <label for="sayi">enter number:</label>
+        <input type="number" name="sayi" id="sayi">
+    </form>
+    <button onclick="fonksiyon()" id="buton" type="button">calculate</button>
+   
+<div id="sonuc">conclusion</div>
+<p id="demo"></p>
+<script>
+  function fonksiyon(){
+      let sayi = document.getElementById("sayi"); 
+      sayi=Number(sayi.value);
+        document.getElementById("demo").innerHTML = "";
+   if(sayi===4){
+      document.getElementById("demo").innerHTML+="tebrikler doğru buldunuz"; 
+   } 
+   else if(sayi<4){
+       document.getElementById("demo").innerHTML+="aranan sayidan küçük bir sayi girdiniz tekrar deneyiniz:";
+    }
+   else{
+       document.getElementById("demo").innerHTML+="aranan sayidan büyük bir sayi girdiniz tekrar deneyiniz:";
+    }
+  } 
+  
+</script>    
+</body>
+</html>
